@@ -51,14 +51,19 @@
                 text-align: center;
             }
             button{
-                position: relative;
                 height: 40px;
                 width: 200px;
-                left: 30%;
             }
             #nextBtn{
-                clip-path: polygon(15% 0%, 300% 0%, 15% 100%, 0% 100%);
-
+                clip-path: polygon(13% 0%, 94% 0, 85% 100%, 5% 100%);
+                position: absolute;
+                left: 31%;
+            }
+            #previousBtn{
+                background:grey;
+                clip-path: polygon(13% 0%, 94% 0, 85% 100%, 5% 100%);
+                position: absolute;
+                left: 48%
             }
         </style>
 
@@ -90,8 +95,8 @@
                 faucibus scelerisque eleifend donec pretium. Non curabitur gravida arcu ac tortor dignissim 
                 convallis aenean et. A pellentesque sit amet porttitor eget dolor morbi non. 
             </p>
-            <button id="previousBtn"></button>
             <button id="nextBtn"></button>
+            <button id="previousBtn"></button>
 
         </div> 
 
