@@ -1,0 +1,4 @@
+{% set loggedIn=True %}
+{% set pageTitle=username %}
+{% block content %}
+<div class="container profile-page">

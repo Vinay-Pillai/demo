@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <img class="display-photo"src="{{url_for('static', filename=profilePhoto)}}">
+    <h1>Welcome to the Chiguru Foundation! {{username}}!</h1>
+{% block content %}
+    <form method="POST"action="{{url_for('publish_meme')}}">
+        <input type="hidden"name="image_url"id="hiddenInput">
+        <div class="container"> ... </div>
+    </form>    
+    <script>
+    
+    </script>
+{% endblock %}
+{% set loggedIn=True %}
+
+{% set pageTitle="Meme Generator" %}
