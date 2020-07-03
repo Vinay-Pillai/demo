@@ -48,32 +48,48 @@
             float:left;
         }
         #home-button{
+        position: absolute;
         margin: auto;
-        color: #FDF3E1;
+        background-color: #F6BD60;
         border-radius: 0px;
-        width: 25px;
-        margin-left: 250px;
+        border: 0px;
+        width: 120px;
+        height: 60px;
+        left: 1050px;
+        top: 50px;
         }
         #stories-button{
+        position: absolute;
         margin: auto;
-        color: #FDF3E1;
+        background-color: #F6BD60;
         border-radius: 0px;
-        width: 25px;
-        margin-left: 300px;
+        border: 0px;
+        width: 120px;
+        height: 60px;
+        left: 1250px;
+        top: 50px;
         }
         #bio-button{
+        position: absolute;
         margin: auto;
-        color: #F6BD60;
+        background-color: #F29F17;
         border-radius: 0px;
-        width: 25px;
-        margin-left: 350px;
+        border: 0px;
+        width: 120px;
+        height: 60px;
+        left: 1450px;
+        top: 50px;
         }
         #contact-button{
+        position: absolute;
         margin: auto;
-        color: #FDF3E1;
+        background-color: #F6BD60;
         border-radius: 0px;
-        width: 25px;
-        margin-left: 400px;
+        border: 0px;
+        width: 120px;
+        height: 60px;
+        left: 1650px;
+        top: 50px;
         }
         
 
@@ -81,10 +97,18 @@
     </head>
     <body>
     <div class="navigationbar">
-     <button id="home-button" href="">Home</button>
-     <button id="stories-button" href="stories.html">Stories</button>
-     <button id="bio-button" href="bio.html">Bio</button>
-     <button id="contact-button" href="contact.html">Contact</button>
+     <form method="POST" action="{{url_for('home.html')}}">
+     <button id="home-button">Home</button>
+     </form>
+     <form method="POST" action="{{url_for('stories.html')}}">
+     <button id="stories-button">Stories</button>
+     </form> 
+     <form method="POST" action="{{url_for('bio.html')}}">
+     <button id="bio-button">Bio</button>
+     </form>  
+     <form method="POST" action="{{url_for('contact.html')}}">
+     <button id="contact-button">Contact</button>
+     </form>  
     </div>
     <div class='box'>    
         <h1>Our staff</h1>
@@ -97,7 +121,9 @@
             </div>
         </div>
     </div>
-
+    <div class footer>
+        
+    </div>
 
 
 
