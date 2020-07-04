@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, request
 
 app = Flask(__name__)
+app.secret_key = b'\x10\x9aQsS\xe6T\xb6\x95M\x80X\xe3\xf3\t\xbc'
 
 @app.route('/')
 def home():
@@ -17,4 +18,24 @@ def contact():
 @app.route('/stories')
 def stories():
     return render_template('stories.html')
-    
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+    else:
+        # TODO Check signup form data and edit session variable
+        pass
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'GET':
+        return render_template('signup.html')
+    else:
+        # TODO Check signup form data and edit session variable
+        pass
+
+@app.route('/logout')
+def logout():
+    # TODO Edit session variable
+    pass
