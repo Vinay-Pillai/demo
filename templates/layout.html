@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        {% block styles %}
+
+        {% endblock %}
+    </head>  
+    <body>
+        {% block navbar %} {% endblock %}
+
+        {% block content %} {% endblock %}
+        {% block scripts %}
+
+        {% endblock %}
+    </body>
+</html>
