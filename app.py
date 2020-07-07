@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request
+from flask import Flask, render_template, session, request, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = b'\x10\x9aQsS\xe6T\xb6\x95M\x80X\xe3\xf3\t\xbc'
@@ -27,7 +27,7 @@ def login():
 
         if username == 'Chiguru' and password == 'lemon':
             session['logged_in'] = True
-            
+            return redirect(url_for('home.html'))
 
         return render_template('login.html')
 
@@ -46,5 +46,6 @@ def signup():
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
+    return redirect(url_for('login.html'))
     
     
