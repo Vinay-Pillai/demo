@@ -23,14 +23,17 @@
             .middleBlock{
                 /* Border is for reference only*/
                 border: 2px solid black;
+                background-image:;
                 position: fixed;
                 width: 100%;
                 height: 30%;
                 top: 12%;
+                
             }
             .bottomBlock{
                 /* Border is for reference only*/
                 position: relative;
+                background: #f8f3ed;
                 border: 2px solid black;
                 margin-left: auto;
                 margin-right: auto;
@@ -75,6 +78,43 @@
                 position: absolute;
                 left: 48%
             }
+            #homeBtn{
+                border: black, 5px, solid;
+                background: #F29F17;
+                color: black;
+                position: absolute;
+                top: 33%;
+                left: 55%;
+                width: 150px;
+            }
+            #storiesBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 33%;
+                left: 65%;
+                width: 150px;
+            }
+            #aboutBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 33%;
+                left: 75%;
+                width: 150px;
+            }
+            #contactBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 33%;
+                left: 85%;
+                width: 150px;
+            }
+            
         </style>
 
     </head>
@@ -82,11 +122,17 @@
         <div class="container">
          <!-- Top of Page, include picture-->
         <div class="topBlock">
-            <img src="logo-desktop.png" height="120">
+            <img id="chigLogo" src="logo-desktop.png" height="120">
+            <button id="homeBtn">Home</button>
+            <button id="storiesBtn">Stories</button>
+            <button id="aboutBtn">About</button>
+            <button id="contactBtn">Contact</button>
+            
+        
         </div>
         <!-- Middle of Page, include picture-->
         <div class="middleBlock">
-          
+         <img src="kids.png">
         </div>
 
         <!-- Bottom of Page, include textbox and socials -->
