@@ -21,8 +21,16 @@ def stories():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'GET':
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        if username == 'Chiguru' and password == 'lemon':
+            session['logged_in'] = True
+            
+
         return render_template('login.html')
+
     else:
         # TODO Check signup form data and edit session variable
         pass
@@ -37,5 +45,6 @@ def signup():
 
 @app.route('/logout')
 def logout():
-    # TODO Edit session variable
-    pass
+    session['logged_in'] = False
+    
+    
