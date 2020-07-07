@@ -1,25 +1,84 @@
 <html> 
   <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
   <style>
 
-
-    
+        #home-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1050px;
+            top: 50px;
+        }
+        #stories-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1250px;
+            top: 50px;
+        }
+        #bio-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1450px;
+            top: 50px;
+        }
+        #contact-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F29F17;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1650px;
+            top: 50px;
+        }
   </style>
+      
   </head>
   <body>
-    <div class="container">
-      <h3>Contact info</h3>   
-     <h4>Sabitha Rama</h4>
-     <h4>Number: 1-(513)-2951599</h4>
-     <h4>Email: sabitharama@gmail.com</h4>
-     <h5>Name</h5>
-     <input type="name" name="username" placeholder="Name" required>
-     <h5>Email</h5>
-     <input type="email" name="email"  placeholder="email" required>
-     <h5>Message</h5>
-     <input type="message" name="message" placeholder="message">         
-     <input type="submit" value="send">
-</div>
+    <div class="navigationbar">
+     <form method="POST" action="{{url_for('home.html')}}">
+     <button id="home-button">Home</button>
+     </form>
+     <form method="POST" action="{{url_for('stories.html')}}">
+     <button id="stories-button">Stories</button>
+     </form> 
+     <form method="POST" action="{{url_for('bio.html')}}">
+     <button id="bio-button">Bio</button>
+     </form>  
+     <form method="POST" action="{{url_for('contact.html')}}">
+     <button id="contact-button">Contact</button>
+     </form>  
+    </div>
+     <div class="container">
+       <h2>Contact Us</h2>
+       <h3>Contact info</h3>   
+       <h4>Sabitha Rama</h4>
+       <h4>Number: 1-(513)-2951599</h4>
+       <h4>Email: sabitharama@gmail.com</h4>
+       <h5>Name</h5>
+       <input type="name" name="username" placeholder="Name" required>
+       <h5>Email</h5>
+       <input type="email" name="email"  placeholder="email" required>
+       <h5>Message</h5>
+       <input type="message" name="message" placeholder="message">         
+       <input type="submit" value="send">
+  </div>
       <script>
           
       </script>
