@@ -1,8 +1,136 @@
 <html>
     <head>
+        <title>Bio Page</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+        body {
+            background-color:#FDF3E1;
+        }
+        .box {
+            margin:auto;
+            margin-top: 200px;
+            background-color:#F6BD60;
+            width:600px;
+            padding:25px;
+            text-align:center;
+        }
+        h1 {
+            color: #482F07;
+            font-family: 'Poppins', sans-serif;
 
+        }
+        h3{
+            margin-top:0px;
+        }
+        title {
+            margin: auto;
+            margin-top: 30px;
+            background-color:#F6BD60;
+            padding: 25px;         
+        } 
+        .navigationbar {
+            margin-top: 50px;
+        }
+        .info{
+            text-align:left;
+            margin:auto;
+            height:auto;
+        }
+        .text{
+            width:75%;
+            margin:none;
+            float:left;
+        }
+        .volunteer-image{
+            width:25%;
+            margin:none;
+            height:auto;
+            float:left;
+        }
+        #home-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1050px;
+            top: 50px;
+        }
+        #stories-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1250px;
+            top: 50px;
+        }
+        #bio-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F29F17;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1450px;
+            top: 50px;
+        }
+        #contact-button{
+            position: absolute;
+            margin: auto;
+            background-color: #F6BD60;
+            border-radius: 0px;
+            border: 0px;
+            width: 120px;
+            height: 60px;
+            left: 1650px;
+            top: 50px;
+        }
+        
+
+        </style>
     </head>
     <body>
+    <div class="navigationbar">
+     <form method="POST" action="{{url_for('home.html')}}">
+     <button id="home-button">Home</button>
+     </form>
+     <form method="POST" action="{{url_for('stories.html')}}">
+     <button id="stories-button">Stories</button>
+     </form> 
+     <form method="POST" action="{{url_for('bio.html')}}">
+     <button id="bio-button">Bio</button>
+     </form>  
+     <form method="POST" action="{{url_for('contact.html')}}">
+     <button id="contact-button">Contact</button>
+     </form>  
+    </div>
+    <div class='box'>    
+        <h1>Our staff</h1>
+        <div class="info">
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="volunteer-image">
+            <div class="text">
+                <h3>Lorem Ipsum name</h3>
+                <p>Lorem Ipsum discription Bla alsf asdfksjlco hauh afncaue gnuaea asdkfl yuroa cnafiadfn araisdfj adfaucas glakcnalf aieudfanc afuwa glnac uf avafa flknajkc  ajafawi jnxlfnkaf</p>
+                <h4>Lorem Ipsum title</h4>
+            </div>
+        </div>
+    </div>
+    <div class footer>
         
+    </div>
+
+
+
+
+    <script>
+        
+    </script>
+    
     </body>
 </html>
