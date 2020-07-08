@@ -70,21 +70,32 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
             width: 20%;
-            height:50%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1250px;
             top: 50px;*/
         }
+        
         #bio-button{
             float:left;
             margin: 2.5%;
             background-color: #F29F17;
+            color:black;
             border-radius: 0px;
             border: 0px;
             width: 20%;
-            height:50%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1450px;
             top: 50px;*/
         }
@@ -92,10 +103,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
             width: 20%;
-            height:50%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1650px;
             top: 50px;*/
         }
@@ -109,9 +125,6 @@
             float:left;
             margin:auto;
             width:20%;
-        }
-        form{
-            margin:0px;
         }
         #thekids{
             text-align:center;
@@ -130,15 +143,15 @@
             <a id="home-button" href="{{url_for('home')}}">
                 Home
             </a>
-            <form method="POST" action="{{url_for('stories')}}">
-                <button id="stories-button">Stories</button>
-            </form> 
-            <form method="POST" action="{{url_for('bio')}}">
-                <button id="bio-button">Bio</button>
-            </form>  
-            <form method="POST" action="{{url_for('contact')}}">
-                <button id="contact-button">Contact</button>
-            </form>  
+            <a id="stories-button" href="{{url_for('stories')}}">
+                Stories
+            </a> 
+            <a id="bio-button" href="{{url_for('bio')}}">
+                Bio
+            </a> 
+            <a id="contact-button" href="{{url_for('contact')}}">
+                Contact
+            </a>  
         </div>
     </div>
     <img src="kids.png" id="thekids">
