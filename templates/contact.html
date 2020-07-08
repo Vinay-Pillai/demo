@@ -1,27 +1,49 @@
 <html> 
   <head>
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
+    .inputBox {
+      border-radius: 4px;
+      border: 1px solid #482F07;
+      padding: 10px;
+    }
 
-    
+    .container {
+      background-color: #FDF3E1;
+      text-align: center;
+      height: 500px;
+      width: 400px;
+    }
+
+    #messageInput {
+      resize: both;
+    }
+
+    #title {
+      font-size: 30px;
+      /*cardenio modern font*/
+    }
   </style>
   </head>
   <body>
     <div class="container">
-      <h3>Contact info</h3>   
+      <h3 id="title">Contact Us</h3>   
      <h4>Sabitha Rama</h4>
      <h4>Number: 1-(513)-2951599</h4>
      <h4>Email: sabitharama@gmail.com</h4>
      <h5>Name</h5>
-     <input type="name" name="username" placeholder="Name" required>
+     <input type="name" name="username" placeholder="Name" class="inputBox" required>
      <h5>Email</h5>
-     <input type="email" name="email"  placeholder="email" required>
+     <input type="email" name="email"  placeholder="email" class="inputBox" required>
      <h5>Message</h5>
-     <input type="message" name="message" placeholder="message">         
+     <input type="message" name="message" placeholder="message" class="inputBox" id="messageInput">         
      <input type="submit" value="send">
 </div>
       <script>
-          
+
       </script>
       
   </body>
