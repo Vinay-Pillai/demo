@@ -54,10 +54,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
             width: 20%;
-            height:50%;
+            text-align:center;
+            padding-top:5%;
+            padding-bottom:5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1050px;
             top: 50px;*/
         }
@@ -122,9 +127,9 @@
     <div class="navigationbar">
         <img src="logo-desktop.png" id="home_image">
         <div id="the_buttons">
-            <form method="POST" action="{{url_for('home')}}">
-                <button id="home-button">Home</button>
-            </form>
+            <a id="home-button" href="{{url_for('home')}}">
+                Home
+            </a>
             <form method="POST" action="{{url_for('stories')}}">
                 <button id="stories-button">Stories</button>
             </form> 
