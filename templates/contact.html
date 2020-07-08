@@ -13,81 +13,130 @@
     }
 
     .container {
+      position: relative;
       background-color: #FDF3E1;
       text-align: center;
-      height: 500px;
-      width: 400px;
+      width: 801px;
+      height: 938px;
+      margin: auto;
     }
 
     #messageInput {
       resize: both;
     }
 
-    #title {
-      font-size: 30px;
-      /*cardenio modern font*/
-    }
-    .navigationbar {
-            margin-top: 10px;
-            margin:auto;
-            height:100px;
+    #contactTitle {
+      width: 714px;
+      height: 88px;
 
-        }
-        #home-button{
-            position: absolute;
-            margin: auto;
-            background-color: #F6BD60;
-            border-radius: 0px;
-            border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1050px;
-            top: 50px;
-        }
-        #stories-button{
-            position: absolute;
-            margin: auto;
-            background-color: #F6BD60;
-            border-radius: 0px;
-            border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1250px;
-            top: 50px;
-        }
-        #bio-button{
-            position: absolute;
-            margin: auto;
-            background-color: #F6BD60;
-            border-radius: 0px;
-            border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1450px;
-            top: 50px;
-        }
-        #contact-button{
-            position: absolute;
-            margin: auto;
-            background-color: #F29F17;
-            border-radius: 0px;
-            border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1650px;
-            top: 50px;
-        }
-        #the_buttons{
-            float:right;
-            margin:auto;
-            width:50%;
-            
-        }
-        #home_image{
-            float:left;
-            margin:auto;
-            width:20%;
-        }
+      font-family: Cardenio Modern; /*font needs to be imported*/
+      font-style: normal;
+      font-weight: normal;
+      font-size: 68px;
+      line-height: 90px;
+      text-align: center;
+
+      color: #482F07;
+    }
+
+    .textInput {
+      width: 400px;
+      height: 65px;
+
+      border: 1px solid #482F07;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+
+    .textInput::placeholder {
+      font-family: Montserrat; /*font needs to be imported*/
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+      display: flex;
+      align-items: center;
+
+      color: rgba(31, 32, 65, 0.35);
+    }
+
+    .textInputLabel {
+      width: 89px;
+      height: 38px;
+
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+
+      color: #482F07;
+    }
+
+    /*---header---*/
+
+    .navigationbar {
+      margin-top: 10px;
+      margin:auto;
+      height:100px;
+
+    }
+    #home-button{
+      position: absolute;
+      margin: auto;
+      background-color: #F6BD60;
+      border-radius: 0px;
+      border: 0px;
+      width: 120px;
+      height: 60px;
+      left: 1050px;
+      top: 50px;
+    }
+    #stories-button{
+      position: absolute;
+      margin: auto;
+      background-color: #F6BD60;
+      border-radius: 0px;
+      border: 0px;
+      width: 120px;
+      height: 60px;
+      left: 1250px;
+      top: 50px;
+    }
+    #bio-button{
+      position: absolute;
+      margin: auto;
+      background-color: #F6BD60;
+      border-radius: 0px;
+      border: 0px;
+      width: 120px;
+      height: 60px;
+      left: 1450px;
+      top: 50px;
+    }
+    #contact-button{
+      position: absolute;
+      margin: auto;
+      background-color: #F29F17;
+      border-radius: 0px;
+      border: 0px;
+      width: 120px;
+      height: 60px;
+      left: 1650px;
+      top: 50px;
+    }
+    #the_buttons{
+      float:right;
+      margin:auto;
+      width:50%;
+        
+    }
+    #home_image{
+      float:left;
+      margin:auto;
+      width:20%;
+    }
   </style>
       
   </head>
@@ -109,19 +158,22 @@
           </form>  
       </div>
   </div>
-     <div class="container">
-       <h2>Contact Us</h2>
-       <h3>Contact info</h3>   
-       <h4>Sabitha Rama</h4>
-       <h4>Number: 1-(513)-2951599</h4>
-       <h4>Email: sabitharama@gmail.com</h4>
-       <h5>Name</h5>
-       <input type="name" name="username" placeholder="Name" required>
-       <h5>Email</h5>
-       <input type="email" name="email"  placeholder="email" required>
-       <h5>Message</h5>
-       <input type="message" name="message" placeholder="message">         
-        <button id="submitBtn">Send</button>
+    <div class="container">
+      <h2 id="contactTitle">Contact Us</h2>
+      <h4>Sabitha Rama</h4>
+      <h4>Number: 1-(513)-2951599</h4>
+      <h4>Email: sabitharama@gmail.com</h4>
+      
+      <h5 class="textInputLabel">Name</h5>
+      <input type="name" name="username" placeholder="Lorem Ipsum" class="textInput" required>
+
+      <h5 class="textInputLabel">Email</h5>
+      <input type="email" name="email"  placeholder="Lorem@Ipsum.com" class="textInput" required>
+
+      <h5 class="textInputLabel">Message</h5>
+      <input type="message" name="message" placeholder="Type Here..." class="textInput">
+      <br> <!--Break may be temporary-->
+      <button id="submitBtn">Send</button>
   </div>
       <script>
         $('#submitBtn').click(result);
