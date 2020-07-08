@@ -27,6 +27,12 @@
       font-size: 30px;
       /*cardenio modern font*/
     }
+    .navigationbar {
+            margin-top: 10px;
+            margin:auto;
+            height:100px;
+
+        }
         #home-button{
             position: absolute;
             margin: auto;
@@ -76,19 +82,22 @@
   </head>
   <body>
     <div class="navigationbar">
-     <form method="POST" action="{{url_for('home')}}">
-     <button id="home-button">Home</button>
-     </form>
-     <form method="POST" action="{{url_for('stories')}}">
-     <button id="stories-button">Stories</button>
-     </form> 
-     <form method="POST" action="{{url_for('bio')}}">
-     <button id="bio-button">Bio</button>
-     </form>  
-     <form method="POST" action="{{url_for('contact')}}">
-     <button id="contact-button">Contact</button>
-     </form>  
-    </div>
+      <img src="logo-desktop.png" id="home_image">
+      <div id="the_buttons">
+          <form method="POST" action="{{url_for('home')}}">
+              <button id="home-button">Home</button>
+          </form>
+          <form method="POST" action="{{url_for('stories')}}">
+              <button id="stories-button">Stories</button>
+          </form> 
+          <form method="POST" action="{{url_for('bio')}}">
+              <button id="bio-button">Bio</button>
+          </form>  
+          <form method="POST" action="{{url_for('contact')}}">
+              <button id="contact-button">Contact</button>
+          </form>  
+      </div>
+  </div>
      <div class="container">
        <h2>Contact Us</h2>
        <h3>Contact info</h3>   
