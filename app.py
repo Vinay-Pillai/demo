@@ -10,13 +10,18 @@ def home():
 @app.route('/bio', methods=['GET', 'POST'])
 def bio():
     # GET and POST requests both render the bio page for now
-    if request.method in ['GET', 'POST']:
+    if request.method == 'POST':
+        # Once the backend is setup the code below should change
+        return request.args
+    else:
         return render_template('bio.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     # GET and POST requests both render the contact page for now
-    if request.method in ['GET', 'POST']:
+    if request.method == 'POST':
+        return args
+    else:
         return render_template('contact.html')
 
 @app.route('/stories')
@@ -52,5 +57,16 @@ def signup():
 def logout():
     session['logged_in'] = False
     return redirect(url_for('login.html'))
-    
-    
+
+@app.route('/about')
+def about():
+    return 'Nothing Here Yet\n Add about.html and render it in the app.py'
+
+@app.errorhandler(404)
+def error_not_found_404(error):
+    print(error)
+    return 'Page Not found'
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
