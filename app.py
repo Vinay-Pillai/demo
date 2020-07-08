@@ -20,13 +20,16 @@ def bio():
 def contact():
     # GET and POST requests both render the contact page for now
     if request.method == 'POST':
-        return args
+        return request.args
     else:
         return render_template('contact.html')
 
-@app.route('/stories')
+@app.route('/stories', methods=['GET', 'POST'])
 def stories():
-    return render_template('stories.html')
+    if request.method == 'POST':
+        return request.args
+    else:
+        render_template('stories.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
