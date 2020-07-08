@@ -29,7 +29,10 @@
             padding: 25px;         
         } 
         .navigationbar {
-            margin-top: 50px;
+            margin-top: 10px;
+            margin:auto;
+            height:100px;
+
         }
         .info{
             text-align:left;
@@ -38,7 +41,7 @@
         }
         .text{
             width:75%;
-            margin:none;
+            margin:10px;
             float:left;
         }
         .volunteer-image{
@@ -48,48 +51,62 @@
             float:left;
         }
         #home-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1050px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1050px;
+            top: 50px;*/
         }
         #stories-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1250px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1250px;
+            top: 50px;*/
         }
         #bio-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F29F17;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1450px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1450px;
+            top: 50px;*/
         }
         #contact-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1650px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1650px;
+            top: 50px;*/
+        }
+        #the_buttons{
+            float:right;
+            margin:auto;
+            width:50%;
+            
+        }
+        #home_image{
+            float:left;
+            margin:auto;
+            width:20%;
+        }
+        form{
+            margin:0px;
         }
         
 
@@ -97,18 +114,21 @@
     </head>
     <body>
     <div class="navigationbar">
-     <form method="POST" action="{{url_for('home.html')}}">
-     <button id="home-button">Home</button>
-     </form>
-     <form method="POST" action="{{url_for('stories.html')}}">
-     <button id="stories-button">Stories</button>
-     </form> 
-     <form method="POST" action="{{url_for('bio.html')}}">
-     <button id="bio-button">Bio</button>
-     </form>  
-     <form method="POST" action="{{url_for('contact.html')}}">
-     <button id="contact-button">Contact</button>
-     </form>  
+        <img src="logo-desktop.png" id="home_image">
+        <div id="the_buttons">
+            <form method="POST" action="{{url_for('home')}}">
+                <button id="home-button">Home</button>
+            </form>
+            <form method="POST" action="{{url_for('stories')}}">
+                <button id="stories-button">Stories</button>
+            </form> 
+            <form method="POST" action="{{url_for('bio')}}">
+                <button id="bio-button">Bio</button>
+            </form>  
+            <form method="POST" action="{{url_for('contact')}}">
+                <button id="contact-button">Contact</button>
+            </form>  
+        </div>
     </div>
     <div class='box'>    
         <h1>Our staff</h1>
