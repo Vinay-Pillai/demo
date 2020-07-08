@@ -114,20 +114,32 @@
     </head>
     <body>
     <div class="navigationbar">
-        <img src="logo-desktop.png" id="home_image">
+        <img src="{{url_for('static', filename='logo-desktop.png')}}" id="home_image">
         <div id="the_buttons">
+            <!--
+                for nav options you should use a normal get request not a post request
+                Example Below:
+                    <a id="home-button" href='{{url_for('home')}}'>
+                        Home
+                    </a>
+                If you have questions message larry-cherry
+            -->
             <form method="POST" action="{{url_for('home')}}">
+                <!--
+                    The home page should not have a post request
+                    Change to a normal get request
+                -->
                 <button id="home-button">Home</button>
             </form>
             <form method="POST" action="{{url_for('stories')}}">
                 <button id="stories-button">Stories</button>
-            </form> 
+            </form>
             <form method="POST" action="{{url_for('bio')}}">
                 <button id="bio-button">Bio</button>
-            </form>  
+            </form>
             <form method="POST" action="{{url_for('contact')}}">
                 <button id="contact-button">Contact</button>
-            </form>  
+            </form>
         </div>
     </div>
     <div class='box'>    
