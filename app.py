@@ -34,6 +34,7 @@ def login():
     else:
         # TODO Check signup form data and edit session variable
         pass
+    return render_template('signup.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
