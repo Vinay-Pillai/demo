@@ -14,4 +14,4 @@
 {% endblock %}
 {% set loggedIn=True %}
 
-{% set pageTitle="Meme Generator" %}
+{% set pageTitle=" " %}
