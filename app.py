@@ -7,13 +7,17 @@ app.secret_key = '9);}%N>Y&KIj,oc'
 def home():
     return render_template('home.html')
 
-@app.route('/bio')
+@app.route('/bio', methods=['GET', 'POST'])
 def bio():
-    return render_template('bio.html')
+    # GET and POST requests both render the bio page for now
+    if request.method in ['GET', 'POST']:
+        return render_template('bio.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    # GET and POST requests both render the contact page for now
+    if request.method in ['GET', 'POST']:
+        return render_template('contact.html')
 
 @app.route('/stories')
 def stories():
