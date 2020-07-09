@@ -1,7 +1,8 @@
-<html>
-    <head>
-        <title>Bio Page</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+{% extends "layout.html"%}
+        {% block title %}
+            <title>Bio</title>
+        {%endblock%}
+        {% block styles %}
         <style>
         body {
             background-color:#FDF3E1;
@@ -146,9 +147,9 @@
             width:100%
         }
         </style>
-    </head>
-    <body>
-    <div class="navigationbar">
+    {% endblock %}
+    {% block content%}
+    <!--<div class="navigationbar">
 
         <img src="logo-desktop.png" id="home_image">
         
@@ -171,7 +172,7 @@
 
         </div>
         
-    </div>
+    </div>-->
     <img src="kids.png" id="thekids">
     <div class='box'>    
         <h1>Our staff</h1>
@@ -195,5 +196,7 @@
         
     </script>
     
-    </body>
-</html>
+    {% endblock %}
+    {% block navbar %}
+    {% include "navbar.html" %} 
+    {% endblock %} 

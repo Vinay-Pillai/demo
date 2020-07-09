@@ -29,7 +29,7 @@ def stories():
     if request.method == 'POST':
         return request.args
     else:
-        render_template('stories.html')
+        return render_template('stories.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
