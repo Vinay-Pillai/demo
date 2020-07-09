@@ -1,11 +1,16 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Success Stories</title>
-        <img src="chigurulogo1.png" class="logo">
-        <h1>Chiguru Foundation</h1>
-        <h3>Get to know our team!</h3>
-        <h4>(Insert name)'s Story</h4>
+
+{% extends "layout.html"%}
+
+
+
+        
+        
+        
+            {%block title%}
+            <title>Success Stories</title>
+            {% endblock %}
+
+        {% block styles %}
         <style> 
             @media only screen and (max-width: 600px) {
             body {
@@ -71,20 +76,20 @@
                  position: relative;
                  top: 145px;
             } 
-            h7{
+            .h7{
                  text-align: center;
                  font: 15px solid grey;
                  font-family: Calibri;
                  position: relative;
                  top: 200px;
-             }
-             h8{
+            }
+            .h8{
                 text-align: center;
                 font: 15px solid grey;
                 font-family: Calibri;
                 position: relative;
                 top: 250px;
-            }
+            }/* there are no h7 or h8 I changes these to classes for you, contact Austin A. for more questions */
             #homeBtn{
                 border: black, 5px, solid;
                 background: #F29F17;
@@ -127,35 +132,29 @@
               height: 130px;
               position: relative;
               top: 150px;
-        }
-         img.floatLeft2{
-              float: left;
-              width: 210px;
-              height: 130px;
-              position: relative;
-              top: 200px;
+            }
+             img.floatLeft2{
+                float: left;
+                width: 210px;
+                height: 130px;
+                position: relative;
+                top: 200px;
+            }
         }
           
       </style>
-    </head>
-
-    <body>
+    {% endblock %}
+    {% block content%}
         <img src="kids.jpg" class="floatLeft">
         <div class="topBlock">
-          <img id="logo" src="logo-desktop.png">
-          <div>
-              <button id="homeBtn">Home</button>
-              <button id="storiesBtn">Stories</button>
-              <button id="aboutBtn">About</button>
-              <button id="contactBtn">Contact</button>
-          </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h2>
         <img src="teacher1.jpg" class="floatLeft1">
       <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h5>
       <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h6>
       <img src="teacher2.jpg" class="floatLeft2">
-      <h7>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h7>
-      <h8>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h8>
-    </body>
-</html>
+      <h6 class="h7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h6>
+      <h6 class="h8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h6>
+      </div>
+    {% endblock %}
+    
