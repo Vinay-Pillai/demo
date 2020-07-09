@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>homepage</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+{% extends "layout.html"%}
+        {% block styles %}
         <style>
            /* background{
                 background-image: ;
@@ -141,22 +139,13 @@
                 font-family: 'Poppins', sans-serif;
             }
             
-
         </style>
-
-    </head>
-    <body>
+        {% endblock %}
+        {% block content%}
+        
         <div class="container">
          <!-- Top of Page, include picture-->
-        <div class="topBlock">
-            <img id="logo" src="logo-desktop.png">
-            <div>
-                <button id="homeBtn">Home</button>
-                <button id="storiesBtn">Stories</button>
-                <button id="aboutBtn">About</button>
-                <button id="contactBtn">Contact</button>
-            </div>
-        </div>
+        
         <!-- Middle of Page, include picture-->
         <div class="middleBlock">
             <img src="kids.png" height="100%" width="100%"/>
@@ -188,5 +177,8 @@
 
         </div>
         </div>
-    </body>
-</html>
+    {% endblock %}
+    {% block navbar %}
+    {% include "navbar.html" %} 
+    {% endblock %} 
+    
