@@ -77,6 +77,17 @@
                 height: 40px;
                 width: 300px;
                 bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            a{
+                height: 40px;
+                width: 300px;
+                bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding: 6px 6px;
+                font-size: 18px;
             }
             #nextBtn{
                 border: none;
@@ -137,8 +148,8 @@
                 left: 85%;
                 width: 150px;
             }
-            button{
-                font-family: 'Poppins', sans-serif;
+            @media screen and (max-width: 600px) {
+                .topNav.responsive {position: relative;}
             }
         </style>
 
@@ -148,11 +159,11 @@
          <!-- Top of Page, include picture-->
         <div class="topBlock">
             <img id="logo" src="logo-desktop.png">
-            <div>
-                <button id="homeBtn">Home</button>
-                <button id="storiesBtn">Stories</button>
-                <button id="aboutBtn">About</button>
-                <button id="contactBtn">Contact</button>
+            <div class="topNav">
+                <a id="homeBtn">Home</a>
+                <a id="storiesBtn">Stories</a>
+                <a id="aboutBtn">About</a>
+                <a id="contactBtn">Contact</a>
             </div>
         </div>
         <!-- Middle of Page, include picture-->
