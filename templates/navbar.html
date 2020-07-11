@@ -1,0 +1,146 @@
+
+        <style>
+            .navigationbar {
+                margin-top: 10px;
+                margin:auto;
+                height:100px;
+
+            }
+            .nav_buttons{
+                float:left;
+                margin: 2.5%;
+                background-color: #F6BD60;
+                color:black;
+                border-radius: 0px;
+                border: 0px;
+                width: 17.5%;
+                text-align:center;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                cursor:pointer;
+                text-decoration:none;
+            }
+            #active{
+                background-color:#F29F17;
+            }
+            /*
+            #home-button{
+                float:left;
+                margin: 2.5%;
+                background-color: #F6BD60;
+                color:black;
+                border-radius: 0px;
+                border: 0px;
+                width: 17.5%;
+                text-align:center;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                cursor:pointer;
+                text-decoration:none;
+                /*left: 1050px;
+                top: 50px;
+            }
+            #stories-button{
+                float:left;
+                margin: 2.5%;
+                background-color: #F6BD60;
+                color:black;
+                border-radius: 0px;
+                border: 0px;
+                width: 17.5%;
+                text-align:center;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                cursor:pointer;
+                text-decoration:none;
+                /*left: 1250px;
+                top: 50px;
+            }
+
+            #bio-button{
+                float:left;
+                margin: 2.5%;
+                background-color: #F29F17;
+                color:black;
+                border-radius: 0px;
+                border: 0px;
+                width: 17.5%;
+                text-align:center;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                cursor:pointer;
+                text-decoration:none;
+                /*left: 1450px;
+                top: 50px;
+            }
+            #contact-button{
+                float:left;
+                margin: 2.5%;
+                background-color: #F6BD60;
+                color:black;
+                border-radius: 0px;
+                border: 0px;
+                width: 17.5%;
+                text-align:center;
+                padding-top:2.5%;
+                padding-bottom:2.5%;
+                cursor:pointer;
+                text-decoration:none;
+                /*left: 1650px;
+                top: 50px;
+            }*/
+            #the_buttons{
+                float:right;
+                margin:auto;
+                width:50%;
+                
+            }
+            #home_image{
+                float:left;
+                margin:auto;
+                width:20%;
+            }
+            #thekids{
+                text-align:center;
+                width:100%;
+                margin:auto;
+                margin-bottom:10px;
+            }
+            #languages{
+                float:right;
+                background-color:transparent;
+                border:0px;
+                width:10%;
+                height:50%;
+                margin-top:1.25%;
+                
+                
+            }
+            #languages_img{
+                width:100%
+            }
+        </style>
+    
+        <div class="navigationbar">
+            <img src="{{url_for('static',filename='logo-desktop.png')}}" id="home_image">
+            
+            <div id="the_buttons">
+                <a class="nav_buttons" href="{{url_for('home')}}" {% if request.path == url_for('home') %} id="active"{%endif%}>
+                    Home
+                </a>
+                <a class="nav_buttons" href="{{url_for('stories')}}" {% if request.path == url_for('stories') %} id="active"{%endif%}>
+                    Stories
+                </a> 
+                <a class="nav_buttons" href="{{url_for('bio')}}" {% if request.path == url_for('bio') %} id="active"{%endif%}>
+                    Bio
+                </a> 
+                <a class="nav_buttons" href="{{url_for('contact')}}" {% if request.path == url_for('contact') %} id="active"{%endif%}>
+                    Contact
+                </a>  
+                <button id="languages">
+                    <img src="{{url_for('static',filename='globe-icon.png')}}" id="languages_img">
+                </button>
+            </div>
+            
+        </div>
+    

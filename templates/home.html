@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>homepage</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+{% extends "layout.html"%}
+        {% block styles %}
         <style>
            /* background{
                 background-image: ;
@@ -77,6 +75,17 @@
                 height: 40px;
                 width: 300px;
                 bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            a{
+                height: 40px;
+                width: 300px;
+                bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding: 6px 6px;
+                font-size: 18px;
             }
             #nextBtn{
                 border: none;
@@ -137,28 +146,29 @@
                 left: 85%;
                 width: 150px;
             }
-            button{
-                font-family: 'Poppins', sans-serif;
+            @media screen and (max-width: 600px) {
+                .topNav.responsive {position: relative;}
             }
-            
-
         </style>
-
-    </head>
-    <body>
+        {% endblock %}
+        {% block content%}
+        
         <div class="container">
          <!-- Top of Page, include picture-->
+
         <div class="topBlock">
             <img id="logo" src="logo-desktop.png">
+            <div class="topNav">
+                <a id="homeBtn">Home</a>
+                <a id="storiesBtn">Stories</a>
+                <a id="aboutBtn">About</a>
+                <a id="contactBtn">Contact</a>
+            </div>
         </div>
+
         <!-- Middle of Page, include picture-->
         <div class="middleBlock">
             <img src="kids.png" height="100%" width="100%"/>
-            <button id="homeBtn">Home</button>
-            <button id="storiesBtn">Stories</button>
-            <button id="aboutBtn">About</button>
-            <button id="contactBtn">Contact</button>
-            
         </div>
 
         <!-- Bottom of Page, include textbox and socials -->
@@ -187,5 +197,8 @@
 
         </div>
         </div>
-    </body>
-</html>
+    {% endblock %}
+    {% block navbar %}
+    {% include "navbar.html" %} 
+    {% endblock %} 
+    
