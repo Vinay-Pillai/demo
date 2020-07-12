@@ -44,9 +44,9 @@
             .socialMedia{
                 position: relative;
                 border: 2px solid black;
-                width: 60px;
+                width: 4%;
                 height: 25%;
-                left: 31%;
+                left: 30.7%;
                 top: 2%;
             }
             .socialBtn{
@@ -75,6 +75,17 @@
                 height: 40px;
                 width: 300px;
                 bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            a{
+                height: 40px;
+                width: 300px;
+                bottom: 10%;
+                font-family: 'Poppins', sans-serif;
+                text-align: center;
+                padding: 6px 6px;
+                font-size: 18px;
             }
             #nextBtn{
                 border: none;
@@ -83,6 +94,8 @@
                 clip-path: polygon(10% 0, 100% 0, 87% 100%, 10% 100%, 0% 50%);;
                 position: absolute;
                 left: 7%;
+                width: 47%;
+                margin: 0px 0px;
             }
             #previousBtn{
                 border: none;
@@ -90,12 +103,15 @@
                 color: #482f07;
                 clip-path: polygon(13% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%);
                 position: absolute;
-                left: 48%
+                left: 48%; 
+                width: 47%;
+                margin: 0px 0px;
             }
 
             #logo{
                 position: relative;
-                height: 100px;
+                height: 80px;
+                width: 15%;
                 left: 40px;
             }
 
@@ -135,8 +151,16 @@
                 left: 85%;
                 width: 150px;
             }
-            button{
-                font-family: 'Poppins', sans-serif;
+            .socialPopUp{
+                background-color: #482f07;
+                position: absolute;
+                border: 2px solid black;
+                width: 70%;
+                height: 45.6%;
+                top: 27.6%;
+            }
+            @media screen and (max-width: 600px) {
+                .topNav.responsive {position: relative;}
             }
         </style>
         {% endblock %}
@@ -144,7 +168,11 @@
         
         <div class="container">
          <!-- Top of Page, include picture-->
-        
+
+        <div class="topBlock">
+            <img id="logo" src="logo-desktop.png">
+        </div>
+
         <!-- Middle of Page, include picture-->
         <div class="middleBlock">
             <img src="kids.png" height="100%" width="100%"/>
@@ -162,8 +190,15 @@
                     tortor aliquam. Tempus urna et pharetra pharetra massa massa ultricies mi quis. 
                     Leo a diam sollicitudin tempor. 
             </p>
-            <button id="nextBtn"> Next</button>
-            <button id="previousBtn">Previous</button>
+            <div class="n_pBtn">
+                <button id="nextBtn"> Previous</button>
+                <button id="previousBtn"> Next</button>
+            </div>
+
+            <div class="socialPopUp">
+                <div id="share"></div>
+                <div id="join"></div>
+            </div>
         </div> 
         <div class="socialMedia">
             <button class="socialBtn"></button>
@@ -171,6 +206,7 @@
             <button class="socialBtn"></button>
             <button class="socialBtn"></button>
         </div>
+
         <!-- include trademarks, ect-->
         <div class="footer">
 
