@@ -94,6 +94,8 @@
                 clip-path: polygon(10% 0, 100% 0, 87% 100%, 10% 100%, 0% 50%);;
                 position: absolute;
                 left: 7%;
+                width: 47%;
+                margin: 0px 0px;
             }
             #previousBtn{
                 border: none;
@@ -101,7 +103,9 @@
                 color: #482f07;
                 clip-path: polygon(13% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%);
                 position: absolute;
-                left: 48%
+                left: 48%; 
+                width: 47%;
+                margin: 0px 0px;
             }
 
             #logo{
@@ -147,6 +151,13 @@
                 left: 85%;
                 width: 150px;
             }
+            .socialPopUp{
+                position: relative;
+                background: #482f07;
+                height: 50%;
+                width: 30%;
+                bottom: 20%;
+            }
             @media screen and (max-width: 600px) {
                 .topNav.responsive {position: relative;}
             }
@@ -178,8 +189,10 @@
                     tortor aliquam. Tempus urna et pharetra pharetra massa massa ultricies mi quis. 
                     Leo a diam sollicitudin tempor. 
             </p>
-            <button id="nextBtn"> Next</button>
-            <button id="previousBtn">Previous</button>
+            <div class="n_pBtn">
+                <button id="nextBtn"> Next</button>
+                <button id="previousBtn">Previous</button>
+            </div>
 
             <div class="socialPopUp">
                 <div id="share"></div>
