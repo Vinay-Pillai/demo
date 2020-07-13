@@ -1,5 +1,6 @@
 
 {% extends "layout.html"%}
+  <title> Contact</title>
 {% block styles %}
   <style>
     body {
@@ -42,7 +43,7 @@
 
     .textInput {
       width: 400px;
-      height: 65px;
+      height: 55px;
 
       border: 1px solid #482F07;
       box-sizing: border-box;
@@ -141,24 +142,40 @@
         form{
             margin:0px;
         }
-        
+        #nextBtn{
+                border: none;
+                background: #482f07;
+                color: #f6bd60;
+                clip-path: polygon(10% 0, 100% 0, 87% 100%, 10% 100%, 0% 50%);;
+                position: absolute;
+                left: 7%;
+                bottom: 15%;
+                width: 47%;
+                margin: 0px 0px;
+            }
+            #previousBtn{
+                border: none;
+                background: #f6bd60;
+                color: #482f07;
+                clip-path: polygon(13% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+                position: absolute;
+                left: 48%; 
+                bottom: 15%;
+                width: 47%;
+                margin: 0px 0px;
+            }
+            #thekids{
+            text-align:center;
+            width:100%;
+            margin:auto;
+            margin-bottom:10px;
+        }
   </style>
       
       {% endblock %}
       {% block content%}
     
-     <div class="container">
-       <h2 id="title">Contact Us</h2> 
-       <h4>Sabitha Rama</h4>
-       <h4>Number: 1-(513)-2951599</h4>
-       <h4>Email: sabitharama@gmail.com</h4>
-       <h5>Name</h5>
-       <input type="name" name="username" placeholder="Name" required>
-       <h5>Email</h5>
-       <input type="email" name="email"  placeholder="email" required>
-       <h5>Message</h5>
-       <input type="message" name="message" placeholder="message">         
-       <input type="submit" value="send">
+  <img src="kids.png" id="thekids">
   </div>
     <div class="container">
       <h2 id="contactTitle">Contact Us</h2>
@@ -176,6 +193,8 @@
       <input type="message" name="message" placeholder="Type Here..." class="textInput">
       <br> <!--Break may be temporary-->
       <button id="submitBtn">Send</button>
+      <button id="nextBtn"> Previous</button>
+      <button id="previousBtn"> Next</button>
   </div>
       <script>
         $('#submitBtn').click(result);
