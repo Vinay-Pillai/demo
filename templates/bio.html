@@ -1,16 +1,17 @@
-<html>
-    <head>
-        <title>Bio Page</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+{% extends "layout.html"%}
+        {% block title %}
+            <title>Bio</title>
+        {%endblock%}
+        {% block styles %}
         <style>
         body {
             background-color:#FDF3E1;
         }
         .box {
             margin:auto;
-            margin-top: 200px;
+            /*margin-top: 200px;*/
             background-color:#F6BD60;
-            width:600px;
+            width:40%;
             padding:25px;
             text-align:center;
         }
@@ -26,8 +27,8 @@
             margin: auto;
             margin-top: 30px;
             background-color:#F6BD60;
-            padding: 25px;         
-        } 
+            padding: 25px;
+        }
         .navigationbar {
             margin-top: 10px;
             margin:auto;
@@ -37,16 +38,16 @@
         .info{
             text-align:left;
             margin:auto;
-            height:auto;
+            height:100%;
         }
         .text{
-            width:75%;
-            margin:10px;
+            width:70%;
+            margin-left:5%;
             float:left;
         }
         .volunteer-image{
             width:25%;
-            margin:none;
+            margin:0px;
             height:auto;
             float:left;
         }
@@ -54,10 +55,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
-            width: 20%;
-            height:50%;
+            width: 17.5%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1050px;
             top: 50px;*/
         }
@@ -65,10 +71,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
-            width: 20%;
-            height:50%;
+            width: 17.5%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1250px;
             top: 50px;*/
         }
@@ -76,10 +87,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F29F17;
+            color:black;
             border-radius: 0px;
             border: 0px;
-            width: 20%;
-            height:50%;
+            width: 17.5%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1450px;
             top: 50px;*/
         }
@@ -87,10 +103,15 @@
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
+            color:black;
             border-radius: 0px;
             border: 0px;
-            width: 20%;
-            height:50%;
+            width: 17.5%;
+            text-align:center;
+            padding-top:2.5%;
+            padding-bottom:2.5%;
+            cursor:pointer;
+            text-decoration:none;
             /*left: 1650px;
             top: 50px;*/
         }
@@ -98,39 +119,34 @@
             float:right;
             margin:auto;
             width:50%;
-            
         }
         #home_image{
             float:left;
             margin:auto;
             width:20%;
         }
-        form{
-            margin:0px;
+        #thekids{
+            text-align:center;
+            width:100%;
+            margin:auto;
+            margin-bottom:10px;
         }
-        
-
+        #languages{
+            float:right;
+            background-color:transparent;
+            border:0px;
+            width:10%;
+            height:50%;
+            margin-top:1.25%;
+        }
+        #languages_img{
+            width:100%
+        }
         </style>
-    </head>
-    <body>
-    <div class="navigationbar">
-        <img src="logo-desktop.png" id="home_image">
-        <div id="the_buttons">
-            <form method="POST" action="{{url_for('home')}}">
-                <button id="home-button">Home</button>
-            </form>
-            <form method="POST" action="{{url_for('stories')}}">
-                <button id="stories-button">Stories</button>
-            </form> 
-            <form method="POST" action="{{url_for('bio')}}">
-                <button id="bio-button">Bio</button>
-            </form>  
-            <form method="POST" action="{{url_for('contact')}}">
-                <button id="contact-button">Contact</button>
-            </form>  
-        </div>
-    </div>
-    <div class='box'>    
+    {% endblock %}
+    {% block content%}
+    <img src="{{url_for('static',filename='kids.png')}}" id="thekids">
+    <div class='box'>
         <h1>Our staff</h1>
         <div class="info">
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="volunteer-image">
@@ -142,15 +158,14 @@
         </div>
     </div>
     <div class footer>
-        
+
     </div>
 
 
 
 
-    <script>
-        
-    </script>
-    
-    </body>
-</html>
+
+    {% endblock %}
+    {% block navbar %}
+    {% include "navbar.html" %}
+    {% endblock %}
