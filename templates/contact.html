@@ -1,6 +1,6 @@
-<html> 
-  <head>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+{% extends "layout.html"%}
+{% block styles %}
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -73,22 +73,9 @@
         }
   </style>
       
-  </head>
-  <body>
-    <div class="navigationbar">
-     <form method="POST" action="{{url_for('home')}}">
-     <button id="home-button">Home</button>
-     </form>
-     <form method="POST" action="{{url_for('stories')}}">
-     <button id="stories-button">Stories</button>
-     </form> 
-     <form method="POST" action="{{url_for('bio')}}">
-     <button id="bio-button">Bio</button>
-     </form>  
-     <form method="POST" action="{{url_for('contact')}}">
-     <button id="contact-button">Contact</button>
-     </form>  
-    </div>
+      {% endblock %}
+      {% block content%}
+    
      <div class="container">
        <h2 id="title">Contact Us</h2> 
        <h4>Sabitha Rama</h4>
@@ -106,6 +93,7 @@
 
       </script>
       
-  </body>
-
-</html>
+      {% endblock %}
+      {% block navbar %}
+      {% include "navbar.html" %} 
+      {% endblock %} 
