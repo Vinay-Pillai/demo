@@ -39,14 +39,14 @@ def login():
 
         if username == 'Chiguru' and password == 'lemon':
             session['logged_in'] = True
-            return redirect(url_for('home.html'))
+            return redirect(url_for('home'))
 
         return render_template('login.html')
 
     else:
         # TODO Check signup form data and edit session variable
         pass
-    return render_template('signup.html')
+    return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -59,7 +59,7 @@ def signup():
 @app.route('/logout')
 def logout():
     session['logged_in'] = False
-    return redirect(url_for('login.html'))
+    return redirect(url_for('login'))
 
 @app.route('/about')
 def about():
