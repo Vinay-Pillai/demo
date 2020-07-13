@@ -27,8 +27,8 @@
             margin: auto;
             margin-top: 30px;
             background-color:#F6BD60;
-            padding: 25px;         
-        } 
+            padding: 25px;
+        }
         .navigationbar {
             margin-top: 10px;
             margin:auto;
@@ -89,7 +89,6 @@
             /*left: 1250px;
             top: 50px;
         }
-        
         #bio-button{
             float:left;
             margin: 2.5%;
@@ -126,7 +125,6 @@
             float:right;
             margin:auto;
             width:50%;
-            
         }
         #home_image{
             float:left;
@@ -146,8 +144,6 @@
             width:10%;
             height:50%;
             margin-top:1.25%;
-            
-            
         }
         #languages_img{
             width:100%
@@ -155,32 +151,8 @@
         </style>
     {% endblock %}
     {% block content%}
-    <!--<div class="navigationbar">
-
-        <img src="logo-desktop.png" id="home_image">
-        
-        <div id="the_buttons">
-            <a id="home-button" href="{{url_for('home')}}">
-                Home
-            </a>
-            <a id="stories-button" href="{{url_for('stories')}}">
-                Stories
-            </a> 
-            <a id="bio-button" href="{{url_for('bio')}}">
-                Bio
-            </a> 
-            <a id="contact-button" href="{{url_for('contact')}}">
-                Contact
-            </a>  
-            <button id="languages">
-                <img src="globe-icon.png" id="languages_img">
-            </button>
-
-        </div>
-        
-    </div>-->
-    <img src="kids.png" id="thekids">
-    <div class='box'>    
+    <img src="{{url_for('static',filename='kids.png')}}" id="thekids">
+    <div class='box'>
         <h1>Our staff</h1>
         <div class="info">
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="volunteer-image">
@@ -192,18 +164,13 @@
         </div>
     </div>
     <div class footer>
-        <!-- idk what goes in here -->
-     <p><p>   
     </div>
 
 
 
 
-    <script>
-        
-    </script>
-    
+
     {% endblock %}
     {% block navbar %}
-    {% include "navbar.html" %} 
-    {% endblock %} 
+    {% include "navbar.html" %}
+    {% endblock %}
