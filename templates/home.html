@@ -2,13 +2,11 @@
 {% extends "layout.html"%}
         {% block styles %}
         <style>
-           /* background{
-                background-image: ;
-            } */
             .container{
                 background-image: url("body.png");
                 width: 100%;
                 height: 100%;
+                font-family: 'Poppins', sans-serif;
             }
             .topBlock{
                 /* Border is for reference only*/
@@ -31,7 +29,7 @@
                 /* Border is for reference only*/
                 background-color: #fdf3e1;
                 position: relative;
-                background: #f8f3ed;
+                color: #482f07;
                 border: 2px solid black;
                 margin-left: auto;
                 margin-right: auto;
@@ -62,31 +60,20 @@
                 bottom: 0px;
             }
             p{
-                font-family: 'Poppins', sans-serif;
                 margin: 0 auto;
                 width: 90%;
             }
             h1{
-                font-family: 'Poppins', sans-serif;
                 text-align: center;
+                font-weight: 100;
             }
  
             button{
                 height: 40px;
                 width: 300px;
                 bottom: 10%;
-                font-family: 'Poppins', sans-serif;
             }
-
-            a{
-                height: 40px;
-                width: 300px;
-                bottom: 10%;
-                font-family: 'Poppins', sans-serif;
-                text-align: center;
-                padding: 6px 6px;
-                font-size: 18px;
-            }
+            
             #nextBtn{
                 border: none;
                 background: #482f07;
@@ -152,11 +139,31 @@
                 width: 150px;
             }
             .socialPopUp{
-                position: relative;
-                background: #482f07;
-                height: 50%;
-                width: 30%;
-                bottom: 20%;
+                display: inline-block;
+                background-color: #482f07;
+                position: absolute;
+                width: 70%;
+                height: 45.6%;
+                /*top: 27.6%; 
+                top: 39%; */
+                color: #f6bd60;
+            }
+            #share{
+                text-align: center;
+                width: 50%;
+                font-size: 20px;
+                height: 100%;
+            }
+            #join{
+                position: absolute;
+                text-align: center;
+                width: 50%;
+                font-size: 20px;
+                right: 0;
+                top: 0px;
+                height: 100%;
+                border-left: 2px solid grey;
+                font-weight: 100;
             }
             @media screen and (max-width: 600px) {
                 .topNav.responsive {position: relative;}
@@ -195,8 +202,12 @@
             </div>
 
             <div class="socialPopUp">
-                <div id="share"></div>
-                <div id="join"></div>
+                <div id="share">
+                    <h4>Share This Page</h4>
+                </div>
+                <div id="join">
+                    <h4>Join Us On _js_</h4>
+                </div>
             </div>
         </div> 
         <div class="socialMedia">
