@@ -1,225 +1,173 @@
-
-{% extends "layout.html"%}
-
-{%block title%}
-<title>Success Stories</title>
-{% endblock %}
-
-{% block styles %}
-<style> 
-    @media only screen and (max-width: 420px) {
-        body {
-            background-color:white;
-        }
-        img.logo{
-            height: 125px;
-            width: 150px;
-            border: 2px solid black;
-        }
-        h1{
-            font-size: 50px;
-            text-align: center;
-            color: grey;
-            font-family: Calibri;
-        }
-        img.floatLeft{
-            float: left;
-            height: 125px;
-            width: 50%;
-            position: relative;
-            margin-left:4%;
-            padding-right:2%
-        }
-        p{
-            text-align: center;
-            font-family: Calibri;
-            position: relative;
-            margin-left:4%;
-            margin-right:4%;
-        }
-        h2{
-            text-align: center;
-            font: 17px solid grey;
-            font-family: Calibri;
-            position: static;
-            top: 62px;
-            margin-left:4%;
-            margin-right:4%;
-        }
-        .stories{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h3{
-            text-align: center;
-            font-family: Calibri;
-            font: 20px solid grey;
-        }
-        h4{
-            position: relative;
-            top: 45px;
-            font-family: Calibri;
-        }
-        h5{
-            text-align: center;
-            font: 15px solid grey;
-            font-family: Calibri;
-            position: relative;
-            top: 133px;
-        }
-        h6{
-            text-align: center;
-            font: 15px solid grey;
-            font-family: Calibri;
-            position: relative;
-            top: 145px;
-        } 
-        .h7{
-            text-align: center;
-            font: 15px solid grey;
-            font-family: Calibri;
-            position: relative;
-            top: 200px;
-        }
-        .h8{
-            text-align: center;
-            font: 15px solid grey;
-            font-family: Calibri;
-            position: relative;
-            top: 250px;
-        }/* there are no h7 or h8 I changes these to classes for you, contact Austin A. for more questions */
-        #homeBtn{
-            border: black, 5px, solid;
-            background: #F29F17;
-            color: black;
-            position: absolute;
-            top: 33%;
-            left: 55%;
-            width: 150px;
-        }
-        #storiesBtn{
-            border: black, 5px, solid;
-            background: #f6bd60;
-            color: black;
-            position: absolute;
-            top: 33%;
-            left: 65%;
-            width: 150px;
-        }
-        #aboutBtn{
-            border: black, 5px, solid;
-            background: #f6bd60;
-            color: black;
-            position: absolute;
-            top: 33%;
-            left: 75%;
-            width: 150px;
-        }
-        #contactBtn{
-            border: black, 5px, solid;
-            background: #f6bd60;
-            color: black;
-            position: absolute;
-            top: 33%;
-            left: 85%;
-            width: 150px;
-        }
-        button{
-            background-color:#F6BD60;
-            border-radius:.25em;
-            border:none;
-            font-family: Calibri;
-            height:3%;
-            width:20%;
-        }
-        button:active{
-            cursor:pointer;
-            background-color:#f29f17;
-        }
-        #previous{
-            position: absolute;
-            left:4%;
-        }
-        #next{
-            position: absolute;
-            right: 4%;
-        }
-    }
-  
-</style>
-{% endblock %}
-{% block content %} 
-    <div id='slide1' class='slides'>
-        <img src="{{url_for('static', filename='black-placeholder.jpg')}}" class="floatLeft">
-        <p>111Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>111Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h2>
-    </div>
-    <div id='slide2' class='slides'>
-        <img src="{{url_for('static', filename='black-placeholder.jpg')}}" class="floatLeft">
-        <p>222Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>222Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h2>
-    </div>
-    <div id='slide3' class='slides'>
-        <img src="{{url_for('static', filename='black-placeholder.jpg')}}" class="floatLeft">
-        <p>333Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>333Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget magna fermentum iaculis eu non diam. Duis tristique sollicitudin nibh sit. Ullamcorper malesuada proin libero nunc consequat interdum. Elit scelerisque mauris pellentesque pulvinar. Diam vel quam elementum pulvinar etiam non quam. Tempus quam pellentesque nec nam aliquam sem et tortor. Vivamus arcu felis bibendum ut tristique. Enim nec dui nunc mattis enim ut tellus elementum sagittis.</h2>
-    </div>
-    <button onclick='previous()' id='previous'>Previous</button>
-    <button onclick='next()' id='next'>Next</button>
-    <br>
-{% endblock %} 
-
-{% block scripts %}
-    <script>
-        $("#slide2").hide();
-        $("#slide3").hide();
-
-        function getSlideNumber(){
-            const slides=["#slide1","#slide2","#slide3"];
-            
-            for(slide of slides){
-                if($(slide).css("display") != "none"){
-                    var id=slide;
-                    console.log(id)
-                    var idNum=parseInt(id.replace("#slide", ''));
-                    console.log(idNum)
-                    return idNum
-                }
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Success Stories</title>
+        <img src="chigurulogo1.png" class="logo">
+        <h1>Chiguru Foundation</h1>
+        <h2>Get to know our team!</h3>
+        <h3>(Insert name)'s Story</h4>
+        <style> 
+            @media only screen and (max-width: 600px) {
+            body {
+                background-color:white;
             }
-            //console.log(testId);
-            //var id=document.getElementsByTagName("div")[2].id;
-            //var idNum=parseInt(id.replace("slide", ''));
-            //console.log(idNum)
-            //return idNum;
-        }
-
-        function previous(){
-            originalIdNum=getSlideNumber();
-            var slides=["#slide1","#slide2","#slide3"];
-            var newId;
-            if (originalIdNum > 1) {
-                newId = originalIdNum-2
-            } else if (originalIdNum == 1) {
-                newId = 2
+            img.logo{
+                height: 125px;
+                width: 150px;
+                border: 2px solid black;
             }
-            $("#slide"+originalIdNum).hide();
-            $(slides[newId]).fadeIn();
-            console.log(newId)
-        }
-
-        function next(){
-            var slides=["#slide1","#slide2","#slide3"];
-            originalIdNum=getSlideNumber();
-            var newId;
-            if (originalIdNum < 3) {
-                newId = originalIdNum;
-            } else {
-                newId = 0
+            h1{
+                font-size: 50px;
+                text-align: center;
+                color: grey;
+                font-family: Calibri;
             }
-            $("#slide"+originalIdNum).hide();
-            $(slides[newId]).fadeIn();
-            console.log(newId)
+            img.floatLeft{
+              float: left;
+              height: 180px;
+              width: 275px;
+              position: relative;
+              top: 50px;
+            }
+            .story1{
+              text-align: center;
+              font-family: Calibri;
+              position: relative;
+              top: 40px;
+            }
+            .story1end{
+                text-align: center;
+                font: 15px grey;
+                font-family: Calibri;
+                position: relative;
+                top: 100px;
+            }
+            .stories{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            h2{
+                text-align: center;
+                font-family: Calibri;
+                font: 20px grey;
+            }
+            h3{
+                position: relative;
+                top: 45px;
+                font-family: Calibri;
+            }
+            .story2{
+                text-align: center;
+                font: 15px grey;
+                font-family: Calibri;
+                position: relative;
+                top: 185px;
+            }
+            .story2end{
+                 text-align: center;
+                 font: 15px grey;
+                 font-family: Calibri;
+                 position: relative;
+                 top: 275px;
+            } 
+            .story3{
+                 text-align: center;
+                 font: 15px grey;
+                 font-family: Calibri;
+                 position: relative;
+                 top: 350px;
+             }
+             .story3end{
+                text-align: center;
+                font: 15px grey;
+                font-family: Calibri;
+                position: relative;
+                top: 420px;
+            }
+            #homeBtn{
+                border: black, 5px, solid;
+                background: #F29F17;
+                color: black;
+                position: absolute;
+                top: 37%;
+                left: 30%;
+                width: 150px;
+            }
+            #storiesBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 37%;
+                left: 40%;
+                width: 150px;
+            }
+            #aboutBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 37%;
+                left: 50%;
+                width: 150px;
+            }
+            #contactBtn{
+                border: black, 5px, solid;
+                background: #f6bd60;
+                color: black;
+                position: absolute;
+                top: 37%;
+                left: 60%;
+                width: 150px;
+            }
+            img.floatLeft1{
+              float: left;
+              width: 275px;
+              height: 175px;
+              position: relative;
+              top: 190px;
         }
-    </script>
-{% endblock %}
+         img.floatLeft2{
+              float: left;
+              width: 250px;
+              height: 175px;
+              position: relative;
+              top: 350px;
+        }
+          
+      </style>
+    </head>
+
+    <body>
+        <img src="kids.jpg" class="floatLeft">
+        <div class="topBlock">
+          <img id="logo" src="logo-desktop.png">
+          <div>
+              <button id="homeBtn">Home</button>
+              <button id="storiesBtn">Stories</button>
+              <button id="aboutBtn">About</button>
+              <button id="contactBtn">Contact</button>
+          </div>
+        <div class = "story1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class = "story1end">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <img src="teacher1.jpg" class="floatLeft1">
+        <div class = "story2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class = "story2end">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <img src="teacher2.jpg" class="floatLeft2">
+        <div class = "story3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class = "story3end">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </body>
+</html>
