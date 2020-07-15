@@ -1,9 +1,11 @@
 
 {% extends "layout.html"%}
+  <title> Contact</title>
 {% block styles %}
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background-color:#FDF3E1
     }
 
     .inputBox {
@@ -13,84 +15,195 @@
     }
 
     .container {
+      position: relative;
       background-color: #FDF3E1;
       text-align: center;
-      height: 500px;
-      width: 400px;
+      width: 801px;
+      height: 938px;
+      margin: auto;
     }
 
     #messageInput {
       resize: both;
     }
 
-    #title {
-      font-size: 30px;
-      /*cardenio modern font*/
+    #contactTitle {
+      width: 714px;
+      height: 88px;
+
+      font-family: Cardenio Modern; /*font needs to be imported*/
+      font-style: normal;
+      font-weight: normal;
+      font-size: 68px;
+      line-height: 90px;
+      text-align: center;
+
+      color: #482F07;
     }
-        #home-button{
-            position: absolute;
-            margin: auto;
+
+    .textInput {
+      width: 400px;
+      height: 55px;
+
+      border: 1px solid #482F07;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+
+    .textInput::placeholder {
+      font-family: Montserrat; /*font needs to be imported*/
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+      display: flex;
+      align-items: center;
+
+      color: rgba(31, 32, 65, 0.35);
+    }
+
+    .textInputLabel {
+      width: 89px;
+      height: 38px;
+
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+
+      color: #482F07;
+    }
+
+    /*---header---*/
+
+    .navigationbar {
+      margin-top: 10px;
+      margin:auto;
+      height:100px;
+
+        }
+    #home-button{
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1050px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1050px;
+            top: 50px;*/
         }
         #stories-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1250px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1250px;
+            top: 50px;*/
         }
         #bio-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F6BD60;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1450px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1450px;
+            top: 50px;*/
         }
         #contact-button{
-            position: absolute;
-            margin: auto;
+            float:left;
+            margin: 2.5%;
             background-color: #F29F17;
             border-radius: 0px;
             border: 0px;
-            width: 120px;
-            height: 60px;
-            left: 1650px;
-            top: 50px;
+            width: 20%;
+            height:50%;
+            /*left: 1650px;
+            top: 50px;*/
+        }
+        #the_buttons{
+            float:right;
+            margin:auto;
+            width:50%;
+            
+        }
+        #home_image{
+            float:left;
+            margin:auto;
+            width:20%;
+        }
+        form{
+            margin:0px;
+        }
+        #nextBtn{
+                border: none;
+                background: #482f07;
+                color: #f6bd60;
+                clip-path: polygon(10% 0, 100% 0, 87% 100%, 10% 100%, 0% 50%);;
+                position: absolute;
+                left: 7%;
+                bottom: 15%;
+                width: 47%;
+                margin: 0px 0px;
+            }
+            #previousBtn{
+                border: none;
+                background: #f6bd60;
+                color: #482f07;
+                clip-path: polygon(13% 0, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+                position: absolute;
+                left: 48%; 
+                bottom: 15%;
+                width: 47%;
+                margin: 0px 0px;
+            }
+            #thekids{
+            text-align:center;
+            width:100%;
+            margin:auto;
+            margin-bottom:10px;
         }
   </style>
       
       {% endblock %}
       {% block content%}
     
-     <div class="container">
-       <h2 id="title">Contact Us</h2> 
-       <h4>Sabitha Rama</h4>
-       <h4>Number: 1-(513)-2951599</h4>
-       <h4>Email: sabitharama@gmail.com</h4>
-       <h5>Name</h5>
-       <input type="name" name="username" placeholder="Name" required>
-       <h5>Email</h5>
-       <input type="email" name="email"  placeholder="email" required>
-       <h5>Message</h5>
-       <input type="message" name="message" placeholder="message">         
-       <input type="submit" value="send">
+  <img src="kids.png" id="thekids">
+  </div>
+    <div class="container">
+      <h2 id="contactTitle">Contact Us</h2>
+      <h4>Sabitha Rama</h4>
+      <h4>Number: 1-(513)-2951599</h4>
+      <h4>Email: sabitharama@gmail.com</h4>
+      
+      <h5 class="textInputLabel">Name</h5>
+      <input type="name" name="username" placeholder="Lorem Ipsum" class="textInput" required>
+
+      <h5 class="textInputLabel">Email</h5>
+      <input type="email" name="email"  placeholder="Lorem@Ipsum.com" class="textInput" required>
+
+      <h5 class="textInputLabel">Message</h5>
+      <input type="message" name="message" placeholder="Type Here..." class="textInput">
+      <br> <!--Break may be temporary-->
+      <button id="submitBtn">Send</button>
+      <button id="nextBtn"> Previous</button>
+      <button id="previousBtn"> Next</button>
   </div>
       <script>
-
+        $('#submitBtn').click(result);
+        
+        function result(){
+          alert("Info is Sent");
+        }
+        
+          
       </script>
       
       {% endblock %}

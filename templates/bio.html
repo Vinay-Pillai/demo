@@ -27,8 +27,8 @@
             margin: auto;
             margin-top: 30px;
             background-color:#F6BD60;
-            padding: 25px;         
-        } 
+            padding: 25px;
+        }
         .navigationbar {
             margin-top: 10px;
             margin:auto;
@@ -38,7 +38,7 @@
         .info{
             text-align:left;
             margin:auto;
-            height:100%;
+            height:150px;
         }
         .text{
             width:70%;
@@ -51,7 +51,59 @@
             height:auto;
             float:left;
         }
-        #home-button{
+        .footer-left{
+                float: left;
+                width: 75%;
+                height: 23.88px;;
+                bottom: 0px;
+       }
+       .footer-right{
+                float:right;
+                width: 25%;
+                height: 23.88px;
+                bottom: 0px;
+       }
+       #pp{
+                width:25%;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;  
+                color: #482F07; 
+                float: left;
+       }
+       #tou{
+                width: 25%;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;  
+                color: #482F07;       
+                float: left;
+       }
+       #contact{
+                width: 25%;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;  
+                color: #482F07;
+                float: left;
+       } 
+       #tag{
+                width: 100%;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #482F07;  
+                float: right;
+       }         
+                /*#home-button{
             float:left;
             margin: 2.5%;
             background-color: #F6BD60;
@@ -65,7 +117,7 @@
             cursor:pointer;
             text-decoration:none;
             /*left: 1050px;
-            top: 50px;*/
+            top: 50px;
         }
         #stories-button{
             float:left;
@@ -81,9 +133,8 @@
             cursor:pointer;
             text-decoration:none;
             /*left: 1250px;
-            top: 50px;*/
+            top: 50px;
         }
-        
         #bio-button{
             float:left;
             margin: 2.5%;
@@ -98,7 +149,7 @@
             cursor:pointer;
             text-decoration:none;
             /*left: 1450px;
-            top: 50px;*/
+            top: 50px;
         }
         #contact-button{
             float:left;
@@ -114,13 +165,12 @@
             cursor:pointer;
             text-decoration:none;
             /*left: 1650px;
-            top: 50px;*/
-        }
+            top: 50px;
+        }*/
         #the_buttons{
             float:right;
             margin:auto;
             width:50%;
-            
         }
         #home_image{
             float:left;
@@ -140,8 +190,6 @@
             width:10%;
             height:50%;
             margin-top:1.25%;
-            
-            
         }
         #languages_img{
             width:100%
@@ -149,54 +197,33 @@
         </style>
     {% endblock %}
     {% block content%}
-    <!--<div class="navigationbar">
-
-        <img src="logo-desktop.png" id="home_image">
-        
-        <div id="the_buttons">
-            <a id="home-button" href="{{url_for('home')}}">
-                Home
-            </a>
-            <a id="stories-button" href="{{url_for('stories')}}">
-                Stories
-            </a> 
-            <a id="bio-button" href="{{url_for('bio')}}">
-                Bio
-            </a> 
-            <a id="contact-button" href="{{url_for('contact')}}">
-                Contact
-            </a>  
-            <button id="languages">
-                <img src="globe-icon.png" id="languages_img">
-            </button>
-
-        </div>
-        
-    </div>-->
-    <img src="kids.png" id="thekids">
-    <div class='box'>    
+    <img src="{{url_for('static',filename='kids.png')}}" id="thekids">
+    <div class='box'>
         <h1>Our staff</h1>
         <div class="info">
             <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="volunteer-image">
             <div class="text">
                 <h3>Lorem Ipsum name</h3>
-                <p>Lorem Ipsum discription Bla alsf asdfksjlco hauh afncaue gnuaea asdkfl yuroa cnafiadfn araisdfj adfaucas glakcnalf aieudfanc afuwa glnac uf avafa flknajkc  ajafawi jnxlfnkaf</p>
                 <h4>Lorem Ipsum title</h4>
+                <p>Lorem Ipsum discription Bla alsasdfksjlco hauh afncaue gnuaea asdkfl yuroa cnafiadfn araisdfj adfaucas glakcnalf aieudfanc afuwa glnac uf avafa flknajkc  ajafawi jnxlfnkaf</p>
+                
             </div>
         </div>
     </div>
-    <div class footer>
-        
+    <div class="footer-left">
+     <p id = "pp">Privacy Policy</p>   
+     <p id = "tou">Terms of Use</p> 
+     <a  href="{{url_for('contact')}}"><p id="contact">Contact Us</p></a>   
+    </div>
+    <div class="footer-right">
+     <p id="tag">©️ Chiguru Foundation</p>   
     </div>
 
 
 
 
-    <script>
-        
-    </script>
-    
+
     {% endblock %}
     {% block navbar %}
-    {% include "navbar.html" %} 
-    {% endblock %} 
+    {% include "navbar.html" %}
+    {% endblock %}

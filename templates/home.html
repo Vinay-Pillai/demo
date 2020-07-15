@@ -3,7 +3,7 @@
         {% block styles %}
         <style>
             .container{
-                background-image: url("body.png");
+                background-image: url("{{url_for('static' ,filename='body.png')}}");
                 width: 100%;
                 height: 100%;
                 font-family: 'Poppins', sans-serif;
@@ -174,14 +174,16 @@
         
         <div class="container">
          <!-- Top of Page, include picture-->
-
+<!--
         <div class="topBlock">
             <img id="logo" src="logo-desktop.png">
         </div>
-
+    -->
         <!-- Middle of Page, include picture-->
         <div class="middleBlock">
-            <img src="kids.png" height="100%" width="100%">        </div>
+            <img src="{{url_for('static', filename='kids.png')}}" height="100%" width="100%"/>
+        </div>
+
 
         <!-- Bottom of Page, include textbox and socials -->
         <div class="bottomBlock">
