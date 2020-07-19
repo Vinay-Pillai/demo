@@ -5,15 +5,8 @@
         {% block styles %}
         <style>
         body {
-            background-color:#FDF3E1;
-        }
-        .box {
-            margin:auto;
-            /*margin-top: 200px;*/
-            background-color:#F6BD60;
-            width:40%;
-            padding:25px;
-            text-align:center;
+            /*background-color:#FDF3E1;*/
+            background-image:url("{{url_for('static' ,filename='body.png')}}");
         }
         h1 {
             color: #482F07;
@@ -22,6 +15,13 @@
         }
         h3{
             margin-top:0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        h4{
+            font-family: 'Poppins', sans-serif;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
         }
         title {
             margin: auto;
@@ -29,16 +29,20 @@
             background-color:#F6BD60;
             padding: 25px;
         }
-        .navigationbar {
-            margin-top: 10px;
+        .box {
             margin:auto;
-            height:100px;
-
+            background-color:#F6BD60;
+            width:40%;
+            padding:25px;
+            text-align:center;
         }
         .info{
             text-align:left;
             margin:auto;
-            height:150px;
+            height:200px;
+            background-color:#F6BD60;
+            border-top:dashed 3px black;
+            padding-top:10px;
         }
         .text{
             width:70%;
@@ -52,147 +56,64 @@
             float:left;
         }
         .footer-left{
-                float: left;
-                width: 75%;
-                height: 23.88px;;
-                bottom: 0px;
+            float: left;
+            width: 50%;
+            height: 23.88px;;
+            bottom: 0px;
        }
        .footer-right{
-                float:right;
-                width: 25%;
-                height: 23.88px;
-                bottom: 0px;
-       }
-       #pp{
-                width:25%;
-                font-family: Poppins;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;  
-                color: #482F07; 
-                float: left;
-       }
-       #tou{
-                width: 25%;
-                font-family: Poppins;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;  
-                color: #482F07;       
-                float: left;
-       }
-       #contact{
-                width: 25%;
-                font-family: Poppins;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;  
-                color: #482F07;
-                float: left;
-       } 
-       #tag{
-                width: 100%;
-                font-family: Poppins;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;
-                color: #482F07;  
-                float: right;
-       }         
-                /*#home-button{
-            float:left;
-            margin: 2.5%;
-            background-color: #F6BD60;
-            color:black;
-            border-radius: 0px;
-            border: 0px;
-            width: 17.5%;
-            text-align:center;
-            padding-top:2.5%;
-            padding-bottom:2.5%;
-            cursor:pointer;
-            text-decoration:none;
-            /*left: 1050px;
-            top: 50px;
-        }
-        #stories-button{
-            float:left;
-            margin: 2.5%;
-            background-color: #F6BD60;
-            color:black;
-            border-radius: 0px;
-            border: 0px;
-            width: 17.5%;
-            text-align:center;
-            padding-top:2.5%;
-            padding-bottom:2.5%;
-            cursor:pointer;
-            text-decoration:none;
-            /*left: 1250px;
-            top: 50px;
-        }
-        #bio-button{
-            float:left;
-            margin: 2.5%;
-            background-color: #F29F17;
-            color:black;
-            border-radius: 0px;
-            border: 0px;
-            width: 17.5%;
-            text-align:center;
-            padding-top:2.5%;
-            padding-bottom:2.5%;
-            cursor:pointer;
-            text-decoration:none;
-            /*left: 1450px;
-            top: 50px;
-        }
-        #contact-button{
-            float:left;
-            margin: 2.5%;
-            background-color: #F6BD60;
-            color:black;
-            border-radius: 0px;
-            border: 0px;
-            width: 17.5%;
-            text-align:center;
-            padding-top:2.5%;
-            padding-bottom:2.5%;
-            cursor:pointer;
-            text-decoration:none;
-            /*left: 1650px;
-            top: 50px;
-        }*/
-        #the_buttons{
             float:right;
-            margin:auto;
-            width:50%;
+            width: 25%;
+            height: 23.88px;
+            bottom: 0px;
         }
-        #home_image{
-            float:left;
-            margin:auto;
-            width:20%;
+        #pp{
+            width:25%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;  
+            color: #482F07; 
+            float: left;
+        }
+        #tou{
+            width: 25%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;  
+            color: #482F07;       
+            float: left;
+        }
+        #contact{
+            width: 25%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;  
+            color: #482F07;
+            float: left;
+        } 
+        #tag{
+            width: 85%;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: #482F07;  
+            float: right;
+            text-align:right;
+            margin-right:15%;
         }
         #thekids{
             text-align:center;
             width:100%;
             margin:auto;
             margin-bottom:10px;
-        }
-        #languages{
-            float:right;
-            background-color:transparent;
-            border:0px;
-            width:10%;
-            height:50%;
-            margin-top:1.25%;
-        }
-        #languages_img{
-            width:100%
         }
         </style>
     {% endblock %}
@@ -205,8 +126,7 @@
             <div class="text">
                 <h3>Lorem Ipsum name</h3>
                 <h4>Lorem Ipsum title</h4>
-                <p>Lorem Ipsum discription Bla alsasdfksjlco hauh afncaue gnuaea asdkfl yuroa cnafiadfn araisdfj adfaucas glakcnalf aieudfanc afuwa glnac uf avafa flknajkc  ajafawi jnxlfnkaf</p>
-                
+                <p>Lorem Ipsum discription Bla carrot alsasdfksjlco hauh afncaue gnuaea asdkfl yuroa cnafiadfn araisdfj adfaucas glakcnalf aieudfanc afuwa glnac uf avafa flknajkc  ajafawi jnxlfnkaf</p>
             </div>
         </div>
     </div>
